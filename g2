@@ -1,0 +1,13 @@
+# Copyright (c) OpenMMLab. All rights reserved.
+import os.path as osp
+
+from .api_wrappers import COCO
+from .builder import DATASETS
+from .coco import CocoDataset
+
+# images exist in annotations but not in image folder.
+objv2_ignore_list = [
+    osp.join('patch16', 'objects365_v2_00908726.jpg'),
+    osp.join('patch6', 'objects365_v1_00320532.jpg'),
+    osp.join('patch6', 'objects365_v1_00320534.jpg'),
+]
